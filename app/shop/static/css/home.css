@@ -5,5 +5,17 @@
 }
 
 .banner h1 {
-  color: white;
+  color: black;
+  font-size:100px;
+  padding:5px;
+  background-color:white;
+  border-radius:5px;
+}
+.banner h2 {
+  color: black;
+  font-style:italic;
+  font-size:25px;
+  padding:5px;
+  background-color:white;
+  border-radius:5px;
 }

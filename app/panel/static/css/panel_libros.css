@@ -20,12 +20,11 @@
 /*<----------------->*/
 /*<------------------------------------------>*/
 .form-container {
-  top: -5%;
-  left:778.5px;
-  position: absolute;
   display:  block;
   transform: translate(-75%);
   box-sizing: border-box;
+  margin-top:-100px;
+  margin-left:800px;
 }
 
 .form-container form {
@@ -216,7 +215,7 @@
 /*encabezado de la tabla*/
 .table-container .title h3 {
   display: absolute;
-  margin-top: 525px;
+  margin-top: -100px;
 
 }
 table {
