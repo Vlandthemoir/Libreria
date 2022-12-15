@@ -1,0 +1,278 @@
+
+/*configuraciones para el texto del encabezado*/
+.title {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  font-family: var(--fuenteHeading);
+}
+
+/*configuracion titulo*/
+.title h3 {
+
+ color:white;
+ font-size: 35px;
+ text-shadow: #474747 3px 5px 2px, 40px 28px 20px rgba(0,0,0,0);
+ font-weight: 750;
+ padding:0;
+ margin:0;
+}
+/*<----------------->*/
+/*<------------------------------------------>*/
+.form-container {
+  top: -5%;
+  left:778.5px;
+  position: absolute;
+  display:  block;
+  transform: translate(-75%);
+  box-sizing: border-box;
+}
+
+.form-container form {
+  display:grid;
+  background: white;
+  padding:25px;
+  border-radius: 10px;
+
+  margin:20px;
+}
+
+.form-container form h3 {
+  padding: 0;
+  margin: 0;
+  color:black;
+  font-size:15px;
+}
+ .title {
+  margin-top:150px;
+}
+
+ input[type=text],textarea {
+  background-color:#A38672 ;
+  color: black;
+  outline:none;
+  border:none;
+  border-radius:5px;
+  text-align:center;
+}
+/*configuracion para los botones del formulario*/
+.bottom-buttons {
+  padding-top:5px;
+}
+
+.bottom-buttons button {
+  background-color:white;
+  padding:5px;
+  color: black;
+  border: 2px solid #A38672;
+  border-radius: 5px;
+  transition-duration:0.4s;
+  cursor:pointer;
+  width:100%;
+  margin-top:20px;
+}
+
+.bottom-buttons button:hover {
+  background-color:#A38672;
+  color:white;
+}
+
+/*-------------------------------------------------------------*/
+
+.card {
+  top:225px;
+  left: 900px;
+  position: absolute;
+  width: 320px;
+  height: 480px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #FF982D;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  content: "BOOK";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.card .contentBox h2 {
+  margin: 0;
+}
+.card .contentBox a {
+  font-size: 15px;
+  color: white;
+  margin: 0;
+
+  text-decoration: none;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #ffce00;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.img {
+  height: 250px;
+  width: auto;
+  border-radius: 10px;
+}
+/*<---------------Estilo para la barra de categorias--------------->*/
+.tag-list {
+  display: flex;
+  position: absolute;
+  left: 334px;
+}
+.tag-list div {
+}
+.element{
+  text-decoration: none;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+/*encabezado de la tabla*/
+.table-container .title h3 {
+  display: absolute;
+  margin-top: 525px;
+
+}
+table {
+  margin-left:225px;
+}
+table thead tr td {
+  text-align:center;
+  font-size:20px;
+}
+table thead tr {
+ background-color:white;
+ border-radius:10px;
+}
+table tbody tr {
+ background-color: #EDEDED ;
+}
+
+table tbody tr:nth-child(even){background-color: #f2f2f2}
+table tbody tr td {
+ padding: 10px;
+ font-size:15px;
+}
+
+/*botones de la tabla*/
+#delete {
+  background-color:white;
+  padding:5px;
+  color: black;
+  border: 2px solid red;
+  border-radius: 5px;
+  transition-duration:0.4s;
+  cursor:pointer;
+  width:100%;
+  text-decoration:none;
+  font-size:15px;
+}
+
+#delete:hover {
+  background-color:red;
+  color:white;
+}
+
+#update {
+  background-color:white;
+  padding:5px;
+  color: black;
+  border: 2px solid #005FFF;
+  border-radius: 5px;
+  transition-duration:0.4s;
+  cursor:pointer;
+  width:100%;
+  text-decoration:none;
+  font-size:15px;
+}
+
+#update:hover {
+  background-color:#005FFF;
+  color:white;
+}

@@ -1,0 +1,64 @@
+{% extends "panel_layout.html" %}
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('panel.static',filename='css/panel_revistas.css') }}">
+<div class="general-container">
+	<div class="form-container">
+		<div class="title">
+			<h3>Registro de revistas</h3>
+		</div>
+		<form action="{{url_for('panel.add_revistas')}}" method="POST">
+			<h3>Nombre</h3>
+			<input id="form-nombre"  type="text" name="nombre" placeholder="">
+			<h3>Portada</h3>
+			<input id="form-imagen"  type="text" name="portada" placeholder="">
+			<h3>Sinopsis</h3>
+			<textarea id="form-Sinopsis"  name="sinopsis" rows="2" cols="30"></textarea>
+			<h3>Categoria</h3>
+      <input id="form-categoria"  type="text" name="categoria" placeholder="">
+      <h3>Precio</h3>
+			<input id="form-precio"  type="text" name="precio" placeholder="">
+      <h3>Autor</h3>
+			<input id="form-autor"  type="text" name="autor" placeholder="">
+			<div class="bottom-buttons">
+				<button type="submit"><b>Guardar</b></button>
+			</div>
+		</form>
+	</div>
+	<div class="table-container">
+		<div class="title">
+			<h3>Tabla de contenidos</h3>
+		</div>
+		<table id="content-table">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Nombre</td>
+					<td>Tipo</td>
+					<td>Categoria</td>
+					<td>Precio</td>
+          <td>Autor</td>
+					<td colspan="2">Ajustes</td>
+				</tr>
+			</thead>
+			<tbody>
+				{% for li in libros  %}
+				<tr>
+					<td>{{li.0}}</td>
+					<td>{{li.1}}</td>
+					<td>{{li.4}}</td>
+					<td>{{li.5}}</td>
+					<td>{{li.6}}</td>
+					<td>{{li.7}}</td>
+					<td>
+						<a id="delete" href="/panel/revistas/delete/{{ li.0 }}">Eliminar</a>
+					</td>
+					<td>
+						<a id="update" href="/panel/libros/edit/{{ li.0 }}">Modificar</a>
+					</td>
+				</tr>
+				{%endfor%}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

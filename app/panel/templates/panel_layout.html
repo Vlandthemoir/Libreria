@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('panel.static', filename='css/panel_layout.css') }}">
+    <script src="https://kit.fontawesome.com/f67351aa49.js" crossorigin="anonymous"></script>
+    <title>libreria</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <span class=""><a href="/panel/"><i class="fa-solid fa-book-bookmark"></i>Tuxt<b>Books</b></a></span>
+      <span class="menu"><a href="/panel/libros"><i class="fa-solid fa-bookmark"></i><b>Añadir Libros</b></a></span>
+      <span class="menu"><a href="/panel/revistas"><i class="fa-solid fa-newspaper"></i><b>Añadir Revistas</b></a></span>
+      <span class="menu"><a href="/panel/comics"><i class="fa-solid fa-mask"></i><b>Añadir Comics</b></a></span>
+    </div>
+    <div class="container">
+      {% block content%}
+    	{% endblock%}
+   </div>
+  </body>
+</html>

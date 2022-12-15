@@ -1,0 +1,28 @@
+{% extends "panel_layout.html" %}
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('panel.static',filename='css/panel_libros.css') }}">
+<div class="general-container">
+	<div class="form-container">
+		<div class="title">
+			<h3>Actualizacion de datos</h3>
+		</div>
+		<form action="/panel/libros/update/{{li.0}}" method="POST">
+			<h3>Nombre</h3>
+			<input id="form-nombre"  type="text" name="nombre" value="{{li.1}}">
+			<h3>Portada</h3>
+			<input id="form-imagen"  type="text" name="portada" value="{{li.2}}">
+			<h3>Sinopsis</h3>
+			<textarea id="form-Sinopsis"  name="sinopsis" rows="2" cols="30" >{{li.3}}</textarea>
+			<h3>Categoria</h3>
+      <input id="form-categoria"  type="text" name="categoria" value="{{li.5}}">
+      <h3>Precio</h3>
+			<input id="form-precio"  type="text" name="precio" value="{{li.6}}">
+      <h3>Autor</h3>
+			<input id="form-autor"  type="text" name="autor" value="{{li.7}}">
+			<div class="bottom-buttons">
+				<button type="submit"><b>Actualizar</b></button>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

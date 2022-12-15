@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('shop.static',filename='css/libros.css') }}">
+<div class="tag-list">
+  <div>
+
+  </div>
+</div>
+<div class="general-container">
+  <div class="table">
+    {% for li in  libros  %}
+    <div class="card">
+      <div class="imgBox">
+        <img src="{{ li.2 }}" alt="" class="img">
+      </div>
+      <div class="contentBox">
+        <h3>{{ li.1 }}</h3>
+        <a href="" class="element">{{ li.5 }}</a>
+        <h2 class="price">${{ li.6 }}</h2>
+        <a href="#" class="buy">Comprar</a>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+
+
+  </div>
+  <script>
+   window.onload = function setColor(){
+         const element = document.getElementsByClassName('element')
+         const backgroundCard = document.getElementsByClassName('card')
+        for(var i = 0;i < element.length;i++){
+         if(element[i].textContent == "Fantasia"){
+           element[i].style.background="#C0392B";
+         }
+         if(element[i].textContent == "Terror"){
+           element[i].style.background="#9B59B6";
+         }
+         if(element[i].textContent == "Historia"){
+           element[i].style.background="#2980B9";
+         }
+         if(element[i].textContent == "Filosofia"){
+           element[i].style.background="#B8BB26";
+         }
+         if(element[i].textContent == "Novela"){
+           element[i].style.background="#FF982D";
+         }
+         if(element[i].textContent == "Musica"){
+           element[i].style.background="#F1C40F";
+         }
+         if(element[i].textContent == "Eventos"){
+           element[i].style.background="#E67E22";
+         }
+         if(element[i].textContent == "Ciencia Ficcion"){
+           element[i].style.background="#4B4E55";
+         }
+       }
+      };
+  </script>
+</div>
+{% endblock%}

@@ -1,0 +1,149 @@
+.general-container {
+  margin-top: 10px;
+  display:grid;
+
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1350px;
+
+}
+/*-----------------------------------------------------*/
+.card {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #FF982D;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  content: "BOOK";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.card .contentBox h2 {
+  margin: 0;
+}
+.card .contentBox a {
+  font-size: 15px;
+  color: white;
+  margin: 0;
+
+  text-decoration: none;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #ffce00;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.img {
+  height: 250px;
+  width: auto;
+  border-radius: 10px;
+}
+/*<---------------Estilo para la barra de categorias--------------->*/
+.tag-list {
+  display: flex;
+  position: absolute;
+  left: 334px;
+}
+.tag-list div {
+}
+.element{
+  text-decoration: none;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+/*<---------------------------------------------------------------->*/

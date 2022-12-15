@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('shop.static', filename='css/layout.css') }}">
+    <script src="https://kit.fontawesome.com/f67351aa49.js" crossorigin="anonymous"></script>
+    <title>libreria</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <span><i class="fa-solid fa-book-bookmark"></i> Tuxt<b>Books</b></span>
+      <span class="menu"><a href="/shop/libros"><i class="fa-solid fa-bookmark"></i><b> Libros</b></a></span>
+      <span class="menu"><a href="/shop/revistas"><i class="fa-solid fa-newspaper"></i><b> Revistas</b></a></span>
+      <span class="menu"><a href="/shop/comics"><i class="fa-solid fa-mask"></i><b> Comics</b></a></span>
+    </div>
+    <div class="container">
+      {% block content%}
+    	{% endblock%}
+   </div>
+  </body>
+</html>

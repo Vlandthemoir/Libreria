@@ -1,0 +1,38 @@
+body {
+  background-color: #a38672;
+  opacity: 1;
+  background: radial-gradient(circle, transparent 20%, #a38672 20%, #a38672 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #a38672 20%, #a38672 80%, transparent 80%, transparent) 55px 55px, linear-gradient(#000000 4.4px, transparent 4.4px) 0 -2.2px, linear-gradient(90deg, #000000 4.4px, #a38672 4.4px) -2.2px 0;
+  background-size: 110px 110px, 110px 110px, 55px 55px, 55px 55px;
+  font-family: sans-serif;
+}
+
+.navbar {
+ background-color: white;
+ border-radius: 45px;
+ padding:5px;
+ display:flex;
+ width:900px;
+ transform:translateX(25%); /*corregir despues*/
+ border-radius: 35px;
+}
+
+.navbar span {
+ font-size:20px;
+ margin-top:15.5px;
+ padding-left:20px;
+ padding-bottom:15.5px;
+}
+.menu a {
+ text-decoration:none;
+ background: linear-gradient(to right,blue,blue 50%, gray 50%);
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-size: 200% 100%;
+ background-position: 100%;
+ transition: background-position 275ms ease;
+ text-decoration: none; // text decorations are clipped in WebKit browsers;
+}
+.menu a:hover {
+ background-position: 0 100%;
+}
